@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Venkateswarlu Gantena — Resume</title>
+<style>
+  @page { size: A4; margin: 12mm 11mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: 'Calibri', 'Segoe UI', Arial, sans-serif; font-size: 10pt; color: #1a1a1a; line-height: 1.4; }
+  .page { max-width: 820px; margin: 0 auto; padding: 12px 14px; }
+
+  /* Header */
+  .name-row { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2.5px solid #0f3a5e; padding-bottom: 6px; margin-bottom: 8px; }
+  h1 { font-size: 21pt; font-weight: 700; color: #0f3a5e; letter-spacing: -0.5px; }
+  .subtitle { font-size: 10.5pt; color: #444; margin-top: 2px; font-weight: 600; }
+  .contact { font-size: 9pt; color: #555; text-align: right; line-height: 1.45; }
+  .contact a { color: #0f3a5e; text-decoration: none; }
+
+  /* Section headings */
+  h2 { font-size: 10.5pt; font-weight: 700; color: #fff; background: #0f3a5e; padding: 3px 8px; margin: 10px 0 5px; text-transform: uppercase; letter-spacing: 1px; }
+  h3 { font-size: 10pt; font-weight: 700; color: #0f3a5e; margin-top: 5px; }
+  .meta { font-size: 9pt; color: #555; font-style: italic; margin-bottom: 3px; }
+
+  /* Summary paragraph */
+  p.summary { font-size: 9.8pt; text-align: justify; }
+  p.summary strong { color: #0f3a5e; }
+
+  /* Lists */
+  ul { margin-left: 17px; }
+  ul li { margin: 1.5px 0; font-size: 9.5pt; line-height: 1.4; }
+  ul li strong { color: #0f3a5e; }
+
+  /* Two-column lists */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .two-col ul { margin-left: 16px; }
+
+  /* Skills key:value rows */
+  .skill-row { display: grid; grid-template-columns: 145px 1fr; gap: 8px; padding: 1.5px 0; font-size: 9.5pt; line-height: 1.35; }
+  .skill-row .k { font-weight: 700; color: #0f3a5e; }
+
+  /* Tech stack inline */
+  .tech-line { font-size: 9pt; color: #444; margin-top: 3px; font-style: italic; }
+  .tech-line strong { font-style: normal; color: #0f3a5e; }
+
+  /* Compact role summary (for older roles) */
+  .role-summary { font-size: 9.5pt; color: #1a1a1a; margin: 3px 0; line-height: 1.45; text-align: justify; }
+  .role-summary strong { color: #0f3a5e; }
+
+  /* Sub-heading inside experience */
+  .sub-h { font-size: 9.8pt; font-weight: 700; color: #0f3a5e; margin: 4px 0 2px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+  /* Pills */
+  .pills { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 3px; }
+  .pill { background: #eef3f8; color: #0f3a5e; padding: 2px 7px; border-radius: 3px; font-size: 8.5pt; font-weight: 500; }
+
+  /* Cert groups */
+  .cert-group { margin-top: 4px; }
+  .cert-group .cg-label { font-size: 9pt; font-weight: 700; color: #0f3a5e; margin-bottom: 2px; }
+
+  /* Footer keywords (small, faded) */
+  .kw-footer { font-size: 7.5pt; color: #888; margin-top: 8px; padding-top: 6px; border-top: 1px solid #ddd; line-height: 1.4; text-align: justify; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="name-row">
+    <div>
+      <h1>VENKATESWARLU GANTENA</h1>
+      <div class="subtitle">Senior QA Test Automation Lead | SDET Manager | Test Architect</div>
+    </div>
+    <div class="contact">
+      vgantena@gmail.com · +91 88858 81436<br>
+      <a href="https://www.linkedin.com/in/vgantena/">linkedin.com/in/vgantena</a><br>
+      Hyderabad, India
+    </div>
+  </div>
+
+  <!-- Professional Summary -->
+  <h2>Professional Summary</h2>
+  <p class="summary">
+    Results-driven Senior QA Test Automation Lead with <strong>15+ years of IT experience</strong> in Test Automation, Quality Engineering, and Test Architecture across enterprise SaaS, banking, networking, and loyalty platforms. Proven expertise in architecting and scaling <strong>multi-app, multi-client test automation frameworks</strong> using Playwright (TypeScript), Selenium (Java/Python), Karate DSL (Java, Spring Boot), and PySpark for database/ETL validation. Currently leading a <strong>38+ member QA team</strong> as Technical &amp; Resource Manager, owning Manual (Functional/Database/ETL), Automation, Performance, and AI/MCP-server consistency testing deliverables. Successfully delivered <strong>10K+ automated regression tests</strong> across <strong>15+ enterprise clients</strong> and <strong>25+ environments</strong>, <strong>sustaining 99%+ test success rates</strong> across every release cycle. Strong expertise in <strong>JMeter and Gatling performance testing</strong> — running load, stress, and concurrency suites for every release. Pioneer of AI-driven test generation, autonomous QA agents, and self-healing test frameworks. Skilled in API testing, UI automation, performance testing, parity testing, defect management, and stakeholder engagement.
+  </p>
+
+  <!-- Core Technical Skills -->
+  <h2>Core Technical Skills</h2>
+  <div class="skill-row"><div class="k">Test Automation Frameworks</div><div>Playwright, Karate DSL, Selenium WebDriver (Java/Python), Cypress, Cucumber, TestNG, JUnit, PyTest, REST Assured, Postman, Vitest</div></div>
+  <div class="skill-row"><div class="k">Test Types</div><div>Manual (Functional, Database, ETL), API Automation, UI Automation, Hybrid API+UI, Performance, Load, Stress, Smoke, Regression, Sanity, Parity, Contract, Schema Validation, Visual, Accessibility, AI/MCP-Server Consistency</div></div>
+  <div class="skill-row"><div class="k">Programming &amp; Scripting</div><div>TypeScript, JavaScript (ES Modules), Java, Python, PySpark, Groovy, SQL, Bash, Shell, YAML</div></div>
+  <div class="skill-row"><div class="k">UI Testing Patterns</div><div>Page Object Model, Resilient Locator Strategies (testid → ARIA → semantic), Component Isolation, Snapshot Testing, Cross-Browser Testing (Selenium Grid)</div></div>
+  <div class="skill-row"><div class="k">API &amp; Protocol Testing</div><div>REST, GraphQL, JSON Schema, OAuth, JWT, Contract Testing, Event-Driven (Kafka), Schema Contract Specs, MCP Server Protocol</div></div>
+  <div class="skill-row"><div class="k">Performance Testing</div><div>JMeter (load, stress, spike, soak), Gatling, Load Profiling, Parallel Execution Tuning, Concurrency Testing, Per-Release Performance Validation</div></div>
+  <div class="skill-row"><div class="k">Database &amp; ETL Testing</div><div>PySpark, SQLAlchemy, pytest-xdist, Schema/Completeness/Transformation/Reconciliation Validation, MySQL, PostgreSQL, MongoDB, DynamoDB, Redshift, Redis, Elasticsearch</div></div>
+  <div class="skill-row"><div class="k">Test Reporting &amp; Tracking</div><div>TestRail, JIRA, Confluence, Allure, Cucumber Reports, Playwright HTML, JUnit XML, Teams Webhook</div></div>
+  <div class="skill-row"><div class="k">CI/CD Test Integration</div><div>Jenkins (Declarative Pipelines), Azure DevOps, GitHub Actions, GitLab CI, Maven, npm</div></div>
+  <div class="skill-row"><div class="k">Test Environment &amp; Infrastructure</div><div>Docker, Kubernetes (test orchestration), AWS, Azure, Linux (test runners and environment provisioning)</div></div>
+  <div class="skill-row"><div class="k">Monitoring for QA Observability</div><div>Grafana, Kibana, ELK Stack, Prometheus, Dynatrace, New Relic, DataDog</div></div>
+  <div class="skill-row"><div class="k">AI &amp; Tooling</div><div>Claude Code, MCP Servers, AI-Augmented Test Generation, LLM-Driven Workflows, Self-Healing Locators, AI/MCP Server Consistency Testing (Vitest)</div></div>
+  <div class="skill-row"><div class="k">Version Control</div><div>Git, GitHub, Bitbucket, Azure Repos</div></div>
+  <div class="skill-row"><div class="k">Methodologies</div><div>Agile, Scrum, BDD, TDD, Shift-Left Testing, Risk-Based Testing, Test Pyramid, Hybrid Testing</div></div>
+  <div class="skill-row"><div class="k">Leadership</div><div>Team Management, Resource Planning, Estimations, Appraisals, Performance Reviews, Stakeholder Management, Skill Development, Training Programs</div></div>
+
+  <!-- AI-Driven Capabilities -->
+  <h2>AI-Driven Capabilities &amp; Achievements</h2>
+  <ul>
+    <li><strong>Autonomous QA Agent</strong> — 3-in-1 tool: nightly regression, AI failure classification, auto-drafted bug tickets, locator repair, Jira filing, Teams/email distribution</li>
+    <li><strong>AI Test Generation Workflow</strong> — natural-language prompt to full Playwright suite (page object + specs + scenarios) for React and Angular</li>
+    <li><strong>AI/MCP Server Consistency Testing</strong> — Vitest-based framework validating response consistency, response-time variability, content similarity, token usage, tool/API usage patterns, and status code consistency across multiple environments (dev, QA, multi-client)</li>
+    <li><strong>AI User Manual Generator</strong> — source discovery, LLM descriptions, live Playwright screenshots, enterprise HTML guide</li>
+    <li><strong>Web-Based Test Lab</strong> — one-click execution portal for non-engineers with real-time status and reports</li>
+    <li><strong>AI-Augmented Skill Library</strong> — 15+ reusable generators for scope analysis, page objects, scenarios, API clients, test data, bug reports, triage</li>
+    <li><strong>Memory-Aware Prompting</strong> — persistent project memory injects feedback rules and conventions into AI tasks</li>
+    <li><strong>Hybrid API + UI Test Framework</strong> — Playwright + Karate covering React, Angular, microservices, Kafka events</li>
+    <li><strong>Multi-Client Test Architecture</strong> — single framework serving 15+ enterprise clients across 25+ environments</li>
+    <li><strong>Parity Testing Engine</strong> — bi-directional automated verification across legacy and modernized UIs</li>
+    <li><strong>AI-Driven Coverage Governance</strong> — auto-refreshed coverage manifests, gap analysis, drift detection</li>
+    <li><strong>Self-Healing Locator Strategy</strong> — AI-proposed locator repair on UI changes</li>
+    <li><strong>Regression Intelligence</strong> — tag-driven taxonomy, batched runner, sustained 99%+ test success rate</li>
+  </ul>
+
+  <!-- Professional Experience -->
+  <h2>Professional Experience</h2>
+
+  <h3>Senior QA Automation Lead — Technical &amp; Resource Manager</h3>
+  <div class="meta">Loyalty Methods India Pvt Ltd · Hyderabad · Jun 2016 — Present</div>
+  <div class="meta">Product: ReactorCX (Enterprise Loyalty Platform) · Clients: 7-Eleven, Speedway, British Petroleum, Western Union, MGM Resorts, and 10+ additional enterprise customers</div>
+
+  <div class="sub-h">Leadership &amp; Management</div>
+  <ul>
+    <li>Leading a <strong>38+ member cross-functional QA team</strong> as Technical &amp; Resource Manager, driving end-to-end quality delivery across multiple enterprise programs</li>
+    <li>Acting as <strong>Technical Lead across all QA disciplines</strong> — Manual Testing (Functional, Database, ETL), Automation Testing, and Performance Testing</li>
+    <li>Driving every release cycle: effort estimations, scope definition, sign-off reviews, stakeholder meetings, and release readiness sign-offs</li>
+    <li>Owning resource planning — capacity estimations, team alignments, project setup, and onboarding for new engagements</li>
+    <li>Managing timesheets, appraisals, and performance reviews; defining career growth plans and mentorship pathways</li>
+    <li>Leading skill development programs, new test-tool design, evaluation, and rollout trainings across the QA organization</li>
+    <li>Partnering with engineering, product, and customer success leadership to align quality strategy with business outcomes</li>
+  </ul>
+
+  <div class="sub-h">Test Architecture &amp; Delivery</div>
+  <ul>
+    <li>Architected and own two enterprise-grade test automation frameworks — a <strong>Playwright UI automation framework</strong> (TypeScript) and a <strong>Karate API automation framework</strong> (Java, Spring Boot) — delivering hybrid API + UI regression coverage across 15+ enterprise clients</li>
+    <li>Built multi-app Playwright framework covering React and Angular applications with <strong>10K+ automated end-to-end test cases</strong> using Page Object Model and 3-tier resilient locator strategies (testid, ARIA, semantic)</li>
+    <li>Maintained <strong>Selenium WebDriver automation suite</strong> (Java/Python) for legacy AngularJS applications with cross-browser execution via Selenium Grid, TestNG, and Cucumber BDD integration</li>
+    <li>Designed multi-client Karate framework spanning <strong>25+ test environments</strong> with auto-resolved client configuration, supporting CRUD APIs, Kafka event validation, middleware, NRT integrations, and performance suites</li>
+    <li>Built and own the <strong>RCX Database / ETL Test Automation Framework</strong> in Python (PySpark + SQLAlchemy + pytest-xdist) — validating schema integrity, completeness, transformation accuracy, and reconciliation across MySQL, PostgreSQL, MongoDB, Redshift, and DynamoDB; integrated with custom HTML reporting and TestRail for CI/CD-driven nightly data validation</li>
+    <li>Lead the <strong>AI / MCP Server Consistency Testing</strong> initiative (Vitest, Node.js, TypeScript) — validating response consistency, response-time variability, content similarity, token usage, tool/API usage patterns, and status-code consistency for the AI server across dev, QA, and multi-client environments</li>
+    <li>Owning <strong>JMeter performance testing</strong> for every release — load, stress, spike, and soak tests against production-like environments; baseline tracking, regression detection on response times and throughput, and stakeholder-ready performance reports</li>
+    <li>Defined regression strategy with batched run protocol and tag taxonomy (smoke, regression, sanity, ignore); <strong>sustained 99%+ test success rate</strong> across every release cycle</li>
+    <li>Established scope-first test development workflow mandating coverage analysis, page object generation, specification authoring, and scenario documentation before any feature ships</li>
+    <li>Created parity testing strategy with 240+ bi-directional automated tests safeguarding rule-engine integrity during legacy AngularJS to modern React migration</li>
+    <li>Engineered AI-augmented test generation pipeline using Claude Code and MCP servers, reducing new-feature test authoring time by approximately <strong>60%</strong></li>
+    <li>Integrated TestRail for centralized reporting with automated run/plan creation, batched result publishing, and Teams webhook notifications</li>
+    <li>Maintained test data lifecycle tooling including canonical seed-data scripts, orphan-cleanup utilities, and faker-based realistic data generation</li>
+    <li>Embedded test execution into CI/CD pipelines (Jenkins Declarative Pipelines) with environment-aware run profiles and parallel batching</li>
+    <li>Established QA observability using Grafana, Kibana, ELK, Dynatrace, and New Relic for test-run analytics, defect triage, and trend analysis</li>
+    <li>Participating in on-call rotation for production quality incidents, root cause analysis, and corrective action validation</li>
+  </ul>
+  <p class="tech-line"><strong>Tech Stack:</strong> Playwright, TypeScript, Karate DSL, Java, Spring Boot, Selenium WebDriver, Python, PySpark, SQLAlchemy, JMeter, Gatling, Vitest, Node.js, Maven, REST, GraphQL, MongoDB, MySQL, PostgreSQL, Redshift, Apache Kafka, Jenkins, TestRail, JIRA, Confluence, Grafana, Kibana, Git, Linux, Groovy</p>
+
+  <h3>Quality Analyst / Test Automation Engineer — Dimension Data (NTT Group)</h3>
+  <div class="meta">Hyderabad, India · Aug 2014 — Jun 2016</div>
+  <p class="role-summary"><strong>Project:</strong> Cisco Direct Global · <strong>Client:</strong> Dimension Data &amp; Cisco Systems</p>
+  <p class="role-summary">Delivered automated functional, configuration, and ETL test suites for enterprise networking products; built Jenkins CI test pipelines and Kibana/Elasticsearch quality dashboards; led on-premises to Azure cloud migration testing (contributing to 30% operational cost reduction); provided 24/7 on-call production support.</p>
+  <p class="tech-line"><strong>Tech Stack:</strong> Selenium, Postman, Jenkins, Python, MySQL, Kibana, Elasticsearch, Grafana, JIRA, Git, Linux</p>
+
+  <h3>Associate Consultant — QA &amp; Test Automation Engineer — Capgemini India Pvt Ltd.</h3>
+  <div class="meta">Pune, India · Jan 2012 — Aug 2014</div>
+  <p class="role-summary"><strong>Project:</strong> DCIUS – Discover Cards · <strong>Client:</strong> Discover Bank Financial Services</p>
+  <p class="role-summary">Delivered functional and automated test suites for microservice-based banking applications with zero-downtime release validation; integrated automated tests into Jenkins CI pipelines; performed containerized deployment validation with Docker/Kubernetes (Helm); validated Redis cluster availability under production-like loads.</p>
+  <p class="tech-line"><strong>Tech Stack:</strong> Selenium, Jenkins, Java, Python, Docker, Kubernetes, Helm, MySQL, Redis, Git, SVN, JIRA, Linux</p>
+
+  <h3>Software Test Engineer — Udbhavah Software Solutions Pvt Ltd.</h3>
+  <div class="meta">Hyderabad, India · Sep 2010 — Jan 2012</div>
+  <p class="role-summary"><strong>Role:</strong> Functional Test Engineer</p>
+  <p class="role-summary">Executed manual functional, integration, and regression testing for product releases; authored test cases, test plans, and defect reports; collaborated with developers on root-cause analysis and fix verification; participated in test environment setup, sanity validation, and release sign-off activities.</p>
+  <p class="tech-line"><strong>Tech Stack:</strong> Manual Testing, Functional Testing, Integration Testing, Regression Testing, Defect Tracking, Test Case Management, JIRA, Bugzilla, Excel, Windows, Linux</p>
+
+  <!-- Key Projects -->
+  <h2>Key Projects</h2>
+  <div class="two-col">
+    <div>
+      <ul>
+        <li><strong>Autonomous QA Agent</strong> — nightly regression, AI failure classification, auto-drafted bug tickets, locator repair, JIRA filing, Teams/email distribution.</li>
+        <li><strong>AI Test Generation Workflow</strong> — natural-language prompt to full Playwright suite (page objects, specs, scenarios) for React and Angular.</li>
+        <li><strong>AI / MCP Server Consistency Suite</strong> — Vitest framework validating response consistency, token usage, tool patterns &amp; status codes across multi-environment.</li>
+        <li><strong>Karate API Automation Framework</strong> — multi-client framework with 11 Maven profiles across 25+ environments; CRUD, Kafka events, middleware, NRT.</li>
+        <li><strong>Playwright UI Framework</strong> — 10K+ E2E test cases across React &amp; Angular with POM and 3-tier resilient locator strategy.</li>
+        <li><strong>Selenium WebDriver Suite</strong> — cross-browser legacy AngularJS app coverage with Selenium Grid, TestNG, and Cucumber BDD integration.</li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li><strong>Database &amp; ETL Test Framework</strong> — Python + PySpark + SQLAlchemy + pytest-xdist validating schema, completeness, transformation, reconciliation across MySQL, PostgreSQL, MongoDB, Redshift, DynamoDB.</li>
+        <li><strong>JMeter Performance Suite</strong> — per-release load, stress, spike, soak tests against production-like environments with baseline tracking and regression detection.</li>
+        <li><strong>Parity Testing Engine</strong> — 240+ bi-directional tests safeguarding rule-engine integrity during legacy AngularJS to React migration.</li>
+        <li><strong>Web-Based Test Lab Portal</strong> — one-click test execution for non-engineers with real-time status and HTML reports.</li>
+        <li><strong>AI User Manual Generator</strong> — 4-step pipeline: source discovery, LLM descriptions, live Playwright screenshots, enterprise HTML guide.</li>
+        <li><strong>Regression Intelligence System</strong> — tag taxonomy, batched runner protocol, coverage manifests, drift detection — sustained 99%+ pass rate.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Core Competencies -->
+  <h2 style="break-before: page; page-break-before: always;">Core Competencies</h2>
+  <div class="pills">
+    <span class="pill">Test Automation</span><span class="pill">Automation Framework Development</span>
+    <span class="pill">Test Architect</span><span class="pill">QA Plan &amp; Strategy</span>
+    <span class="pill">QA Process Setup</span><span class="pill">Resource Management</span>
+    <span class="pill">Process Improvement</span><span class="pill">Client Management</span>
+    <span class="pill">Quality Assurance Leadership</span><span class="pill">Mentorship &amp; Team Development</span>
+    <span class="pill">Collaborative Leader</span><span class="pill">AI-Driven QA Innovation</span>
+    <span class="pill">Regression Engineering</span><span class="pill">Performance Testing</span>
+    <span class="pill">System Design</span><span class="pill">Stakeholder Management</span>
+    <span class="pill">Release Estimation</span><span class="pill">CI/CD Test Integration</span>
+  </div>
+
+  <!-- Soft Skills -->
+  <h2>Soft Skills</h2>
+  <p style="font-size: 9.5pt;">Team Management &amp; Leadership · Mentoring &amp; Coaching · Quality Management · Critical Thinking · Adaptability · Continuous Learning · Stakeholder Communication · Problem Solving</p>
+
+  <!-- Awards -->
+  <h2>Awards &amp; Recognition</h2>
+  <div class="pills">
+    <span class="pill">Digital Warrior Award (2x)</span><span class="pill">Kudos</span>
+    <span class="pill">Pat on the Back</span><span class="pill">Guru of the Month</span>
+    <span class="pill">You are an Inspiration</span><span class="pill">Top Performer</span>
+    <span class="pill">QA Innovation Excellence</span>
+  </div>
+
+  <!-- Education -->
+  <h2>Education</h2>
+  <ul>
+    <li><strong>Bachelor of Computer Science</strong> — Sri Venkateswara University, Thirupati, AP, India · March 2009</li>
+    <li><strong>Post Graduation Diploma in Computer Applications Training</strong> — Govt. Employment Training Institute, Proddutur, AP, India · June 2010</li>
+  </ul>
+
+  <!-- Certifications -->
+  <h2>Certifications</h2>
+  <div class="two-col">
+    <div>
+      <div class="cert-group">
+        <div class="cg-label">Quality Engineering &amp; Test Automation</div>
+        <ul>
+          <li>ISTQB Advanced Test Automation Engineer (TAE) – Certified</li>
+          <li>Advance QA Engineer Evolution</li>
+        </ul>
+      </div>
+      <div class="cert-group">
+        <div class="cg-label">Project Management</div>
+        <ul>
+          <li>Project Management with Agile – L1V2</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="cert-group">
+        <div class="cg-label">Cloud &amp; Platform</div>
+        <ul>
+          <li>AWS Certified Solutions Architect – Associate</li>
+          <li>Microsoft Certified: Fundamentals</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Languages -->
+  <h2>Languages</h2>
+  <p style="font-size: 9.5pt;">English (Professional Working Proficiency) · Telugu (Native) · Hindi (Conversational)</p>
+
+  <!-- Keyword footer -->
+  <p class="kw-footer">
+    <strong>Keywords:</strong> QA Lead, Test Automation Lead, SDET Manager, Test Architect, QA Manager, Quality Engineering, ISTQB, ISTQB Advanced TAE, Agile Project Management, Playwright, TypeScript, Karate DSL, Java, Spring Boot, Selenium WebDriver, Cypress, Cucumber, TestNG, JUnit, PyTest, Vitest, REST Assured, Postman, BDD, TDD, Manual Testing, Functional Testing, Database Testing, ETL Testing, PySpark, SQLAlchemy, Performance Testing, Load Testing, Stress Testing, Spike Testing, Soak Testing, Gatling, JMeter, API Automation, UI Automation, Hybrid Testing, Parity Testing, Regression Testing, Smoke Testing, Sanity Testing, Schema Validation, Contract Testing, Accessibility Testing, Visual Testing, REST, GraphQL, JSON Schema, MCP Servers, Page Object Model, Self-Healing Locators, CI/CD Test Integration, Jenkins, GitHub Actions, Azure DevOps, Maven, MongoDB, MySQL, PostgreSQL, Redshift, DynamoDB, Redis, Elasticsearch, Apache Kafka, TestRail, JIRA, Confluence, Allure, Grafana, Kibana, ELK Stack, Dynatrace, New Relic, DataDog, AI-Driven Testing, LLM Workflows, AI/MCP Consistency, QA Agent, Test Lab, Agile, Scrum, Shift-Left Testing, Defect Management, Bug Triage, Root Cause Analysis, Team Leadership, Resource Planning, Estimations, Appraisals, Stakeholder Management, Loyalty Platform, SaaS, Multi-Tenant, Microservices, Hyderabad, India.
+  </p>
+
+</div>
+</body>
+</html>
