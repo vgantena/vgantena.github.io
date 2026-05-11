@@ -3,946 +3,716 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Venkateswarlu Gantena — Senior QA Test Automation Lead, IT Manager. Karate, Playwright, AI-driven testing, regression engineering." />
-  <meta name="author" content="Venkateswarlu Gantena" />
-  <meta property="og:title" content="Venkateswarlu Gantena | QA Automation Lead" />
-  <meta property="og:description" content="12+ years architecting enterprise test automation. Karate, Playwright, AI-driven QA workflows." />
-  <meta property="og:type" content="website" />
+  <meta name="description" content="Venkateswarlu Gantena — Senior QA Test Automation Lead & IT Manager. 12+ years. Karate, Playwright, AI-driven testing." />
   <title>Venkateswarlu Gantena | Senior QA Automation Lead</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    /* ========== THEME TOKENS ========== */
+    /* ===== THEME ===== */
     :root[data-theme="dark"] {
-      --bg: #0a0e1a;
-      --bg-card: #131826;
-      --bg-elevated: #1a2033;
-      --bg-hover: #1e2538;
-      --text: #e6edf3;
-      --text-muted: #94a3b8;
-      --text-soft: #64748b;
-      --border: #1e293b;
-      --border-strong: #334155;
-      --accent: #06b6d4;
-      --accent-2: #8b5cf6;
-      --accent-glow: rgba(6, 182, 212, 0.15);
+      --bg: #0a0e1a; --bg-card: #131826; --bg-elevated: #1a2033;
+      --text: #e6edf3; --text-muted: #94a3b8; --text-soft: #64748b;
+      --border: #1e293b; --accent: #06b6d4; --accent-2: #8b5cf6;
+      --accent-glow: rgba(6, 182, 212, 0.12);
       --grad: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%);
-      --shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-      --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.5);
-      --grid-color: rgba(148, 163, 184, 0.04);
+      --shadow: 0 2px 8px rgba(0,0,0,0.3);
+      --grid-color: rgba(148, 163, 184, 0.03);
     }
     :root[data-theme="light"] {
-      --bg: #f8fafc;
-      --bg-card: #ffffff;
-      --bg-elevated: #f1f5f9;
-      --bg-hover: #f8fafc;
-      --text: #0f172a;
-      --text-muted: #475569;
-      --text-soft: #64748b;
-      --border: #e2e8f0;
-      --border-strong: #cbd5e1;
-      --accent: #0891b2;
-      --accent-2: #7c3aed;
-      --accent-glow: rgba(8, 145, 178, 0.12);
+      --bg: #f8fafc; --bg-card: #ffffff; --bg-elevated: #f1f5f9;
+      --text: #0f172a; --text-muted: #475569; --text-soft: #64748b;
+      --border: #e2e8f0; --accent: #0891b2; --accent-2: #7c3aed;
+      --accent-glow: rgba(8, 145, 178, 0.10);
       --grad: linear-gradient(135deg, #0891b2 0%, #2563eb 50%, #7c3aed 100%);
-      --shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
-      --shadow-lg: 0 12px 36px rgba(15, 23, 42, 0.12);
-      --grid-color: rgba(15, 23, 42, 0.04);
+      --shadow: 0 2px 8px rgba(15,23,42,0.06);
+      --grid-color: rgba(15, 23, 42, 0.025);
     }
 
-    /* ========== RESET ========== */
+    /* ===== RESET ===== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+    html { scroll-behavior: smooth; scroll-padding-top: 70px; }
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-      transition: background 0.3s ease, color 0.3s ease;
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg); color: var(--text);
+      line-height: 1.55; -webkit-font-smoothing: antialiased;
+      transition: background 0.3s, color 0.3s;
       background-image:
         linear-gradient(var(--grid-color) 1px, transparent 1px),
         linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
-      background-size: 48px 48px;
+      background-size: 40px 40px;
+      font-size: 15px;
     }
     a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
     a:hover { color: var(--accent-2); }
     .mono { font-family: 'JetBrains Mono', monospace; }
-    ::selection { background: var(--accent-glow); color: var(--text); }
+    ::selection { background: var(--accent-glow); }
 
-    /* ========== LAYOUT ========== */
-    .container { max-width: 1140px; margin: 0 auto; padding: 0 1.5rem; }
-    section { padding: 5rem 0; position: relative; }
-    .section-head { margin-bottom: 3rem; }
-    .section-tag {
-      display: inline-block; font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem; color: var(--accent); font-weight: 500;
-      padding: 0.25rem 0.75rem; background: var(--accent-glow);
-      border: 1px solid var(--border); border-radius: 999px;
-      margin-bottom: 0.75rem;
-    }
-    .section-head h2 {
-      font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 700;
-      color: var(--text); letter-spacing: -0.5px; margin-bottom: 0.5rem;
-    }
-    .section-head p { color: var(--text-muted); font-size: 1.05rem; max-width: 640px; }
+    /* ===== LAYOUT ===== */
+    .wrap { max-width: 1140px; margin: 0 auto; padding: 0 1.25rem; }
 
-    /* ========== NAV ========== */
+    /* ===== NAV ===== */
     header {
       position: sticky; top: 0; z-index: 100;
-      background: color-mix(in srgb, var(--bg) 85%, transparent);
-      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
     }
     .nav {
       display: flex; align-items: center; justify-content: space-between;
-      padding: 1rem 1.5rem; max-width: 1140px; margin: 0 auto;
+      padding: 0.75rem 1.25rem; max-width: 1140px; margin: 0 auto;
     }
     .logo {
-      font-family: 'JetBrains Mono', monospace; font-weight: 700;
-      font-size: 1.1rem; background: var(--grad);
-      -webkit-background-clip: text; background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 1rem;
+      background: var(--grad); -webkit-background-clip: text;
+      background-clip: text; -webkit-text-fill-color: transparent;
     }
-    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; align-items: center; }
     .nav-links a {
-      color: var(--text-muted); font-weight: 500; font-size: 0.92rem;
-      position: relative; padding: 0.25rem 0;
+      color: var(--text-muted); font-weight: 500; font-size: 0.88rem;
+      padding: 0.25rem 0; position: relative;
     }
     .nav-links a:hover { color: var(--text); }
     .nav-links a::after {
       content: ""; position: absolute; bottom: -2px; left: 0;
-      width: 0; height: 2px; background: var(--grad);
-      transition: width 0.25s ease;
+      width: 0; height: 2px; background: var(--grad); transition: width 0.25s;
     }
     .nav-links a:hover::after { width: 100%; }
     .theme-toggle {
       background: var(--bg-card); border: 1px solid var(--border);
-      width: 38px; height: 38px; border-radius: 10px; cursor: pointer;
+      width: 34px; height: 34px; border-radius: 8px; cursor: pointer;
       display: flex; align-items: center; justify-content: center;
-      color: var(--text); transition: all 0.2s ease;
+      color: var(--text);
     }
-    .theme-toggle:hover { border-color: var(--accent); background: var(--bg-elevated); }
-    .theme-toggle svg { width: 18px; height: 18px; }
+    .theme-toggle:hover { border-color: var(--accent); }
+    .theme-toggle svg { width: 16px; height: 16px; }
     .theme-toggle .icon-sun { display: none; }
     :root[data-theme="light"] .theme-toggle .icon-sun { display: block; }
     :root[data-theme="light"] .theme-toggle .icon-moon { display: none; }
 
-    /* ========== HERO ========== */
+    /* ===== HERO ===== */
     .hero {
-      padding: 7rem 1.5rem 5rem; position: relative;
-      text-align: center; overflow: hidden;
+      padding: 3rem 1.25rem 2.25rem; text-align: center; position: relative; overflow: hidden;
     }
     .hero::before {
       content: ""; position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 60%);
+      background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 55%);
       pointer-events: none;
     }
     .hero-content { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; }
     .pill {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      padding: 0.45rem 1rem; margin-bottom: 1.75rem;
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.3rem 0.85rem; margin-bottom: 1rem;
       background: var(--bg-card); border: 1px solid var(--border);
-      border-radius: 999px; font-size: 0.85rem; font-weight: 500;
+      border-radius: 999px; font-size: 0.78rem; font-weight: 500;
       color: var(--text-muted); font-family: 'JetBrains Mono', monospace;
     }
     .pill::before {
-      content: ""; width: 8px; height: 8px; border-radius: 50%;
-      background: #22c55e; box-shadow: 0 0 8px #22c55e;
+      content: ""; width: 6px; height: 6px; border-radius: 50%;
+      background: #22c55e; box-shadow: 0 0 6px #22c55e;
       animation: pulse 2s infinite;
     }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; } 50% { opacity: 0.5; }
-    }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
     .hero h1 {
-      font-size: clamp(2.25rem, 6vw, 4rem);
-      font-weight: 800; letter-spacing: -1.5px; line-height: 1.1;
-      margin-bottom: 1rem;
+      font-size: clamp(1.85rem, 5vw, 3rem); font-weight: 800;
+      letter-spacing: -1px; line-height: 1.1; margin-bottom: 0.4rem;
     }
     .hero h1 .grad {
-      background: var(--grad);
-      -webkit-background-clip: text; background-clip: text;
-      -webkit-text-fill-color: transparent;
+      background: var(--grad); -webkit-background-clip: text;
+      background-clip: text; -webkit-text-fill-color: transparent;
     }
     .hero .role {
-      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-      color: var(--text-muted); margin-bottom: 1.25rem;
-      font-family: 'JetBrains Mono', monospace;
+      font-size: clamp(0.95rem, 2vw, 1.1rem); color: var(--text-muted);
+      margin-bottom: 0.85rem; font-family: 'JetBrains Mono', monospace;
     }
-    .hero .role .cursor {
-      display: inline-block; width: 3px; height: 1em;
-      background: var(--accent); margin-left: 4px; vertical-align: middle;
-      animation: blink 1s step-end infinite;
-    }
-    @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
     .hero .lead {
-      font-size: 1.1rem; color: var(--text-muted);
-      max-width: 720px; margin: 0 auto 2rem;
+      font-size: 0.98rem; color: var(--text-muted); max-width: 720px;
+      margin: 0 auto 1.25rem;
     }
-    .hero-cta {
-      display: flex; gap: 0.85rem; justify-content: center; flex-wrap: wrap;
-    }
+    .hero-cta { display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap; }
     .btn {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      padding: 0.85rem 1.5rem; border-radius: 10px;
-      font-weight: 600; font-size: 0.95rem; cursor: pointer;
-      transition: all 0.2s ease; border: 1px solid transparent;
-      font-family: inherit;
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.6rem 1.15rem; border-radius: 8px;
+      font-weight: 600; font-size: 0.88rem; cursor: pointer;
+      transition: all 0.2s; border: 1px solid transparent; font-family: inherit;
     }
-    .btn-primary {
-      background: var(--grad); color: #fff; box-shadow: 0 4px 16px var(--accent-glow);
-    }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px var(--accent-glow); color: #fff; }
-    .btn-secondary {
-      background: var(--bg-card); color: var(--text); border-color: var(--border);
-    }
-    .btn-secondary:hover { border-color: var(--accent); background: var(--bg-elevated); }
-    .btn svg { width: 16px; height: 16px; }
+    .btn-primary { background: var(--grad); color: #fff; box-shadow: 0 3px 12px var(--accent-glow); }
+    .btn-primary:hover { transform: translateY(-1px); color: #fff; }
+    .btn-secondary { background: var(--bg-card); color: var(--text); border-color: var(--border); }
+    .btn-secondary:hover { border-color: var(--accent); }
+    .btn svg { width: 14px; height: 14px; }
 
-    /* ========== STATS ========== */
-    .stats-bar {
-      margin-top: 4rem;
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 1rem; max-width: 920px; margin-left: auto; margin-right: auto;
+    /* ===== STATS ===== */
+    .stats {
+      margin-top: 1.75rem; display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 0.6rem; max-width: 920px; margin-left: auto; margin-right: auto;
     }
     .stat {
       background: var(--bg-card); border: 1px solid var(--border);
-      border-radius: 12px; padding: 1.25rem; text-align: center;
-      transition: all 0.2s ease;
+      border-radius: 8px; padding: 0.7rem 0.5rem; text-align: center;
     }
-    .stat:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: var(--shadow); }
     .stat .num {
-      font-size: 1.75rem; font-weight: 800; line-height: 1;
-      background: var(--grad);
-      -webkit-background-clip: text; background-clip: text;
-      -webkit-text-fill-color: transparent; margin-bottom: 0.25rem;
+      font-size: 1.3rem; font-weight: 800; line-height: 1;
+      background: var(--grad); -webkit-background-clip: text;
+      background-clip: text; -webkit-text-fill-color: transparent;
     }
-    .stat .label { color: var(--text-muted); font-size: 0.82rem; font-weight: 500; }
+    .stat .label { color: var(--text-muted); font-size: 0.7rem; margin-top: 0.2rem; font-weight: 500; }
 
-    /* ========== ABOUT ========== */
-    .about-grid {
-      display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem; align-items: start;
+    /* ===== MAIN GRID LAYOUT ===== */
+    .main {
+      display: grid; grid-template-columns: 280px 1fr; gap: 1.5rem;
+      padding: 2rem 0;
     }
-    .about p { color: var(--text-muted); margin-bottom: 1.25rem; font-size: 1.02rem; }
-    .about strong { color: var(--text); font-weight: 600; }
-    .about-card {
+    @media (max-width: 880px) { .main { grid-template-columns: 1fr; } }
+
+    /* ===== SIDEBAR ===== */
+    aside {
+      display: flex; flex-direction: column; gap: 1rem;
+      position: sticky; top: 80px; align-self: start;
+    }
+    @media (max-width: 880px) { aside { position: static; } }
+    .sb-card {
       background: var(--bg-card); border: 1px solid var(--border);
-      border-radius: 14px; padding: 1.75rem; box-shadow: var(--shadow);
+      border-radius: 10px; padding: 1rem 1.1rem;
     }
-    .about-card h3 {
-      font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px;
-      color: var(--text-muted); margin-bottom: 1rem; font-weight: 600;
+    .sb-card h3 {
+      font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px;
+      color: var(--accent); font-weight: 700; margin-bottom: 0.65rem;
+      padding-bottom: 0.5rem; border-bottom: 1px solid var(--border);
     }
-    .quick-list { list-style: none; }
-    .quick-list li {
-      display: flex; gap: 0.75rem; padding: 0.6rem 0;
-      border-bottom: 1px solid var(--border); font-size: 0.95rem;
+    .sb-list { list-style: none; }
+    .sb-list li {
+      display: flex; flex-direction: column;
+      padding: 0.35rem 0; font-size: 0.85rem;
     }
-    .quick-list li:last-child { border-bottom: none; }
-    .quick-list .key { color: var(--text-muted); min-width: 110px; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; }
-    .quick-list .val { color: var(--text); }
+    .sb-list li + li { border-top: 1px solid var(--border); }
+    .sb-list .k {
+      color: var(--text-muted); font-size: 0.7rem; text-transform: uppercase;
+      letter-spacing: 0.6px; margin-bottom: 0.1rem; font-weight: 600;
+    }
+    .sb-list .v { color: var(--text); font-size: 0.86rem; word-break: break-word; }
+    .sb-list .v a:hover { text-decoration: underline; }
 
-    /* ========== SKILLS ========== */
-    .skills-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.25rem;
-    }
-    .skill-card {
+    /* ===== CONTENT SECTIONS ===== */
+    main { display: flex; flex-direction: column; gap: 1.5rem; }
+    .sec {
       background: var(--bg-card); border: 1px solid var(--border);
-      border-radius: 14px; padding: 1.5rem;
-      transition: all 0.25s ease; position: relative; overflow: hidden;
+      border-radius: 10px; padding: 1.5rem 1.5rem 1.35rem;
     }
-    .skill-card::before {
-      content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-      background: var(--grad); opacity: 0; transition: opacity 0.25s ease;
+    .sec-head {
+      display: flex; align-items: baseline; gap: 0.75rem;
+      margin-bottom: 1rem; padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
     }
-    .skill-card:hover {
-      transform: translateY(-3px); border-color: var(--accent); box-shadow: var(--shadow-lg);
+    .sec-head h2 {
+      font-size: 1.15rem; font-weight: 700; color: var(--text);
+      letter-spacing: -0.3px;
     }
-    .skill-card:hover::before { opacity: 1; }
-    .skill-card h3 {
-      font-size: 1.05rem; color: var(--text); margin-bottom: 1rem;
-      font-weight: 600; display: flex; align-items: center; gap: 0.6rem;
-    }
-    .skill-card h3 .ico {
-      width: 32px; height: 32px; border-radius: 8px;
-      background: var(--accent-glow); color: var(--accent);
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 0.85rem;
-    }
-    .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-    .tag {
-      background: var(--bg-elevated); color: var(--text);
-      padding: 0.3rem 0.7rem; border-radius: 6px;
-      font-size: 0.82rem; font-weight: 500;
-      border: 1px solid var(--border);
-    }
-
-    /* ========== EXPERIENCE TIMELINE ========== */
-    .timeline { position: relative; padding-left: 2rem; }
-    .timeline::before {
-      content: ""; position: absolute; left: 7px; top: 8px; bottom: 8px;
-      width: 2px; background: var(--border);
-    }
-    .tl-item { position: relative; padding-bottom: 2.5rem; }
-    .tl-item:last-child { padding-bottom: 0; }
-    .tl-item::before {
-      content: ""; position: absolute; left: -2rem; top: 6px;
-      width: 16px; height: 16px; border-radius: 50%;
-      background: var(--bg); border: 3px solid var(--accent);
-      box-shadow: 0 0 0 4px var(--bg);
-    }
-    .tl-meta {
-      display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;
-      margin-bottom: 0.4rem;
-    }
-    .tl-date {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;
+    .sec-head .tag {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.7rem;
       color: var(--accent); font-weight: 600;
     }
-    .tl-company {
-      color: var(--text-muted); font-size: 0.88rem;
-    }
-    .tl-role {
-      font-size: 1.15rem; font-weight: 700; color: var(--text);
-      margin-bottom: 0.5rem;
-    }
-    .tl-desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.75rem; }
-    .tl-tech { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-    .tl-tech .tag { font-size: 0.75rem; padding: 0.2rem 0.55rem; }
 
-    /* ========== PROJECTS ========== */
-    .projects-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.25rem;
+    /* ===== PROFILE SUMMARY (bullets) ===== */
+    .summary-list { list-style: none; }
+    .summary-list li {
+      display: flex; gap: 0.6rem; padding: 0.4rem 0;
+      color: var(--text-muted); font-size: 0.92rem; line-height: 1.55;
     }
-    .project-card {
-      background: var(--bg-card); border: 1px solid var(--border);
-      border-radius: 14px; padding: 1.75rem;
-      transition: all 0.25s ease; display: flex; flex-direction: column;
-      position: relative; overflow: hidden;
+    .summary-list li::before {
+      content: "▸"; color: var(--accent); font-weight: 700; flex-shrink: 0; line-height: 1.55;
     }
-    .project-card::before {
-      content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: var(--grad); opacity: 0; transition: opacity 0.25s ease;
+    .summary-list li strong { color: var(--text); font-weight: 600; }
+
+    /* ===== TECHNICAL SKILLS (key: value) ===== */
+    .skills-table { display: flex; flex-direction: column; gap: 0.5rem; }
+    .skill-row {
+      display: grid; grid-template-columns: 200px 1fr; gap: 1rem;
+      padding: 0.55rem 0; border-bottom: 1px solid var(--border);
     }
-    .project-card:hover {
-      transform: translateY(-4px); border-color: var(--accent);
-      box-shadow: var(--shadow-lg);
-    }
-    .project-card:hover::before { opacity: 1; }
-    .project-head {
-      display: flex; justify-content: space-between; align-items: start;
-      gap: 1rem; margin-bottom: 0.75rem;
-    }
-    .project-card h3 {
-      font-size: 1.15rem; color: var(--text); font-weight: 700;
-    }
-    .project-badge {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.7rem;
-      padding: 0.2rem 0.55rem; border-radius: 999px;
-      background: var(--accent-glow); color: var(--accent);
-      white-space: nowrap; border: 1px solid var(--border);
-    }
-    .project-card .role-line {
-      color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.85rem;
+    .skill-row:last-child { border-bottom: none; }
+    .skill-row .k {
+      color: var(--accent); font-weight: 600; font-size: 0.85rem;
       font-family: 'JetBrains Mono', monospace;
     }
-    .project-card p {
-      color: var(--text-muted); font-size: 0.94rem; flex: 1; margin-bottom: 1.25rem;
+    .skill-row .v {
+      color: var(--text); font-size: 0.9rem; line-height: 1.55;
     }
-    .project-tech {
-      display: flex; flex-wrap: wrap; gap: 0.35rem;
-      padding-top: 1rem; border-top: 1px solid var(--border);
+    @media (max-width: 560px) {
+      .skill-row { grid-template-columns: 1fr; gap: 0.2rem; }
+      .skill-row .k { font-size: 0.78rem; }
     }
-    .project-tech .tag { font-size: 0.75rem; padding: 0.2rem 0.55rem; }
 
-    /* ========== CERTIFICATIONS ========== */
-    .certs-grid {
+    /* ===== CORE COMPETENCIES (pill cloud) ===== */
+    .pill-grid { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .comp-pill {
+      padding: 0.35rem 0.8rem; border-radius: 6px;
+      background: var(--bg-elevated); color: var(--text);
+      font-size: 0.83rem; font-weight: 500;
+      border: 1px solid var(--border);
+      transition: all 0.15s;
+    }
+    .comp-pill:hover {
+      border-color: var(--accent); color: var(--accent);
+      background: var(--accent-glow); cursor: default;
+    }
+
+    /* ===== SOFT SKILLS (compact list) ===== */
+    .soft-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.4rem;
+    }
+    .soft-item {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.4rem 0.7rem; background: var(--bg-elevated);
+      border-radius: 6px; font-size: 0.87rem; color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .soft-item::before {
+      content: "◆"; color: var(--accent); font-size: 0.7rem;
+    }
+
+    /* ===== EXPERIENCE TIMELINE (compact) ===== */
+    .timeline { padding-left: 1.5rem; position: relative; }
+    .timeline::before {
+      content: ""; position: absolute; left: 5px; top: 6px; bottom: 6px;
+      width: 2px; background: var(--border);
+    }
+    .tl-item { position: relative; padding-bottom: 1.25rem; }
+    .tl-item:last-child { padding-bottom: 0; }
+    .tl-item::before {
+      content: ""; position: absolute; left: -1.5rem; top: 5px;
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--bg-card); border: 2px solid var(--accent);
+    }
+    .tl-meta {
+      display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: baseline;
+      margin-bottom: 0.2rem;
+    }
+    .tl-date {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.75rem;
+      color: var(--accent); font-weight: 600;
+    }
+    .tl-company { color: var(--text-muted); font-size: 0.82rem; }
+    .tl-role { font-size: 0.98rem; font-weight: 700; color: var(--text); margin-bottom: 0.3rem; }
+    .tl-desc { color: var(--text-muted); font-size: 0.87rem; margin-bottom: 0.4rem; line-height: 1.55; }
+    .tl-tech { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+    .tl-tech span {
+      background: var(--bg-elevated); border: 1px solid var(--border);
+      color: var(--text); padding: 0.15rem 0.5rem; border-radius: 4px;
+      font-size: 0.72rem; font-weight: 500;
+    }
+
+    /* ===== PROJECTS (compact grid) ===== */
+    .proj-grid {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1rem;
+      gap: 0.75rem;
     }
-    .cert-group {
+    .proj {
+      background: var(--bg-elevated); border: 1px solid var(--border);
+      border-radius: 8px; padding: 0.85rem 1rem; transition: all 0.2s;
+    }
+    .proj:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .proj-head {
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 0.5rem; margin-bottom: 0.3rem;
+    }
+    .proj h4 { font-size: 0.92rem; font-weight: 700; color: var(--text); }
+    .proj .badge {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.65rem;
+      padding: 0.1rem 0.4rem; border-radius: 999px;
+      background: var(--accent-glow); color: var(--accent);
+      white-space: nowrap;
+    }
+    .proj p { color: var(--text-muted); font-size: 0.82rem; line-height: 1.5; margin-bottom: 0.5rem; }
+    .proj .stack { display: flex; flex-wrap: wrap; gap: 0.25rem; }
+    .proj .stack span {
       background: var(--bg-card); border: 1px solid var(--border);
-      border-radius: 12px; padding: 1.5rem;
+      color: var(--text-muted); padding: 0.1rem 0.4rem; border-radius: 4px;
+      font-size: 0.68rem; font-family: 'JetBrains Mono', monospace;
     }
-    .cert-group h4 {
-      font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1.2px;
-      color: var(--accent); font-weight: 600; margin-bottom: 1rem;
+
+    /* ===== AWARDS ===== */
+    .awards { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .award {
+      display: flex; align-items: center; gap: 0.45rem;
+      padding: 0.45rem 0.85rem; background: var(--bg-elevated);
+      border: 1px solid var(--border); border-radius: 6px;
+      font-size: 0.85rem; color: var(--text);
     }
-    .cert-list { list-style: none; }
+    .award::before {
+      content: "★"; color: var(--accent); font-size: 0.9rem;
+    }
+
+    /* ===== CERTS ===== */
+    .cert-list { list-style: none; display: flex; flex-direction: column; gap: 0.3rem; }
     .cert-list li {
-      display: flex; gap: 0.6rem; padding: 0.45rem 0;
-      color: var(--text); font-size: 0.92rem;
+      display: flex; gap: 0.5rem; align-items: flex-start;
+      font-size: 0.85rem; color: var(--text); padding: 0.2rem 0;
     }
     .cert-list li::before {
       content: "✓"; color: var(--accent); font-weight: 700; flex-shrink: 0;
     }
 
-    /* ========== CONTACT ========== */
-    .contact-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1rem;
-    }
-    .contact-card {
-      background: var(--bg-card); border: 1px solid var(--border);
-      border-radius: 14px; padding: 1.75rem;
-      transition: all 0.2s ease; display: flex; gap: 1rem; align-items: center;
-    }
-    .contact-card:hover { border-color: var(--accent); transform: translateY(-2px); }
-    .contact-icon {
-      width: 44px; height: 44px; border-radius: 10px;
-      background: var(--accent-glow); color: var(--accent);
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .contact-icon svg { width: 20px; height: 20px; }
-    .contact-body .label {
-      color: var(--text-muted); font-size: 0.78rem; text-transform: uppercase;
-      letter-spacing: 1px; margin-bottom: 0.2rem; font-weight: 600;
-    }
-    .contact-body .value {
-      color: var(--text); font-size: 0.95rem; font-weight: 500;
-      word-break: break-word;
-    }
-    .contact-body a.value:hover { color: var(--accent); }
-
-    /* ========== FOOTER ========== */
+    /* ===== FOOTER ===== */
     footer {
-      padding: 2.5rem 1.5rem; text-align: center;
+      padding: 1.5rem 1.25rem; text-align: center;
       border-top: 1px solid var(--border); color: var(--text-muted);
-      font-size: 0.88rem;
+      font-size: 0.8rem;
     }
-    footer .mono { font-size: 0.8rem; }
 
-    /* ========== RESPONSIVE ========== */
-    @media (max-width: 820px) {
-      .about-grid { grid-template-columns: 1fr; }
-      .nav-links { gap: 1.25rem; }
-      .nav-links a { font-size: 0.85rem; }
-    }
+    /* ===== RESPONSIVE ===== */
     @media (max-width: 560px) {
-      .hero { padding: 4.5rem 1.5rem 3rem; }
-      section { padding: 3.5rem 0; }
+      .hero { padding: 2.25rem 1rem 1.75rem; }
       .nav-links li:not(:last-child) { display: none; }
-      .container { padding: 0 1rem; }
-      .hero-cta { flex-direction: column; align-items: stretch; }
+      .sec { padding: 1.2rem 1rem; }
+      .hero-cta { flex-direction: column; }
       .btn { justify-content: center; }
     }
   </style>
 </head>
-
 <body>
-  <!-- ============= NAV ============= -->
-  <header>
-    <nav class="nav">
-      <div class="logo">&lt;vgantena/&gt;</div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li>
-          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          </button>
-        </li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- ============= HERO ============= -->
-  <section class="hero">
-    <div class="hero-content">
-      <span class="pill">Available for senior QA leadership roles</span>
-      <h1>Venkateswarlu <span class="grad">Gantena</span></h1>
-      <p class="role">Senior QA Automation Lead &amp; IT Manager<span class="cursor"></span></p>
-      <p class="lead">
-        12+ years architecting enterprise test automation across <strong>SaaS, banking, and loyalty platforms</strong>.
-        Leading a <strong>38+ member QA team</strong>. Specializing in <strong>Karate API automation</strong>,
-        <strong>Playwright UI testing</strong>, regression engineering, and <strong>AI-driven QA workflows</strong>.
-      </p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="Venkat_Gantena_Resume.pdf" download>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Download Resume
-        </a>
-        <a class="btn btn-secondary" href="#contact">Get in Touch</a>
-      </div>
+<!-- ===== NAV ===== -->
+<header>
+  <nav class="nav">
+    <div class="logo">&lt;vgantena/&gt;</div>
+    <ul class="nav-links">
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</header>
 
-      <div class="stats-bar">
-        <div class="stat"><div class="num">12+</div><div class="label">Years Experience</div></div>
-        <div class="stat"><div class="num">10K+</div><div class="label">Automated Tests</div></div>
-        <div class="stat"><div class="num">15+</div><div class="label">Enterprise Clients</div></div>
-        <div class="stat"><div class="num">25+</div><div class="label">Test Environments</div></div>
-        <div class="stat"><div class="num">38+</div><div class="label">Team Members</div></div>
-        <div class="stat"><div class="num">99%+</div><div class="label">Pass Rate</div></div>
-      </div>
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-content">
+    <span class="pill">Available for senior QA leadership roles</span>
+    <h1>Venkateswarlu <span class="grad">Gantena</span></h1>
+    <p class="role">Senior QA Automation Lead &amp; IT Manager · Hyderabad</p>
+    <p class="lead">
+      12+ years architecting enterprise test automation. Leading a 38+ member QA team.
+      Karate · Playwright · AI-driven QA workflows · Regression engineering · System design.
+    </p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="Venkat_Gantena_Resume.pdf" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Resume
+      </a>
+      <a class="btn btn-secondary" href="#contact">Get in Touch</a>
     </div>
-  </section>
-
-  <!-- ============= ABOUT ============= -->
-  <section id="about">
-    <div class="container">
-      <div class="section-head">
-        <span class="section-tag">// about</span>
-        <h2>About Me</h2>
-        <p>A test automation leader with engineering depth and a manager's discipline.</p>
-      </div>
-
-      <div class="about-grid">
-        <div class="about">
-          <p>
-            I am a <strong>Senior QA Test Automation Lead and IT Manager</strong> with over a decade of experience
-            architecting test automation frameworks for enterprise platforms in <strong>loyalty, banking, and SaaS</strong>.
-            I currently lead a <strong>38+ member cross-functional QA team</strong> as Technical and Resource Manager,
-            owning end-to-end deliverables across manual, automation, and performance testing.
-          </p>
-          <p>
-            My core stack is <strong>Karate DSL</strong> for API automation, <strong>Playwright</strong> for UI testing,
-            and <strong>Jenkins / GitHub Actions</strong> for CI/CD integration. I have shipped <strong>10K+ automated
-            tests</strong> across <strong>15+ enterprise clients</strong> and <strong>25+ environments</strong>, sustaining
-            <strong>99%+ test success rates</strong> across every release cycle.
-          </p>
-          <p>
-            I am especially passionate about applying <strong>AI to QA</strong> — designing autonomous test agents,
-            self-healing locators, natural-language test generation, and AI-driven coverage governance. Beyond engineering,
-            I drive release estimations, stakeholder sign-offs, appraisals, skill development, and new-tool design and
-            training across the QA organization.
-          </p>
-        </div>
-
-        <aside class="about-card">
-          <h3>Quick Facts</h3>
-          <ul class="quick-list">
-            <li><span class="key">Role</span><span class="val">QA Automation Lead</span></li>
-            <li><span class="key">Location</span><span class="val">Hyderabad, India</span></li>
-            <li><span class="key">Experience</span><span class="val">12+ years</span></li>
-            <li><span class="key">Team Size</span><span class="val">38+ engineers</span></li>
-            <li><span class="key">Domain</span><span class="val">SaaS · Loyalty · Banking</span></li>
-            <li><span class="key">Availability</span><span class="val">Open to senior roles</span></li>
-          </ul>
-        </aside>
-      </div>
+    <div class="stats">
+      <div class="stat"><div class="num">12+</div><div class="label">Years</div></div>
+      <div class="stat"><div class="num">10K+</div><div class="label">Tests</div></div>
+      <div class="stat"><div class="num">15+</div><div class="label">Clients</div></div>
+      <div class="stat"><div class="num">25+</div><div class="label">Environments</div></div>
+      <div class="stat"><div class="num">38+</div><div class="label">Team</div></div>
+      <div class="stat"><div class="num">99%+</div><div class="label">Pass Rate</div></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ============= SKILLS ============= -->
-  <section id="skills">
-    <div class="container">
-      <div class="section-head">
-        <span class="section-tag">// skills</span>
-        <h2>Skills &amp; Expertise</h2>
-        <p>Tools, languages, and disciplines I work with day to day.</p>
+<!-- ===== MAIN ===== -->
+<div class="wrap">
+  <div class="main">
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside>
+      <div class="sb-card" id="contact">
+        <h3>Contact</h3>
+        <ul class="sb-list">
+          <li><span class="k">Email</span><span class="v"><a href="mailto:vgantena@gmail.com">vgantena@gmail.com</a></span></li>
+          <li><span class="k">Phone</span><span class="v"><a href="tel:+918885881436">+91 88858 81436</a></span></li>
+          <li><span class="k">LinkedIn</span><span class="v"><a href="https://www.linkedin.com/in/vgantena/" target="_blank" rel="noopener">linkedin.com/in/vgantena</a></span></li>
+          <li><span class="k">GitHub</span><span class="v"><a href="https://github.com/vgantena" target="_blank" rel="noopener">github.com/vgantena</a></span></li>
+          <li><span class="k">Location</span><span class="v">Hyderabad, India</span></li>
+        </ul>
       </div>
 
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h3><span class="ico">API</span>API Automation</h3>
-          <div class="tags">
-            <span class="tag">Karate DSL</span><span class="tag">REST Assured</span>
-            <span class="tag">Postman</span><span class="tag">GraphQL</span>
-            <span class="tag">JSON Schema</span><span class="tag">Contract Testing</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <h3><span class="ico">UI</span>UI Automation</h3>
-          <div class="tags">
-            <span class="tag">Playwright</span><span class="tag">Selenium</span>
-            <span class="tag">Cypress</span><span class="tag">Cucumber</span>
-            <span class="tag">Page Object Model</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <h3><span class="ico">REG</span>Regression Strategy</h3>
-          <div class="tags">
-            <span class="tag">Test Pyramid</span><span class="tag">Risk-Based</span>
-            <span class="tag">Shift-Left</span><span class="tag">Parity Testing</span>
-            <span class="tag">Hybrid API+UI</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <h3><span class="ico">PRF</span>Performance Testing</h3>
-          <div class="tags">
-            <span class="tag">Gatling</span><span class="tag">JMeter</span>
-            <span class="tag">Load Profiling</span><span class="tag">Concurrency</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <h3><span class="ico">LNG</span>Languages</h3>
-          <div class="tags">
-            <span class="tag">TypeScript</span><span class="tag">Java</span>
-            <span class="tag">Python</span><span class="tag">Groovy</span>
-            <span class="tag">SQL</span><span class="tag">Bash</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <h3><span class="ico">CI</span>CI/CD &amp; Reporting</h3>
-          <div class="tags">
-            <span class="tag">Jenkins</span><span class="tag">GitHub Actions</span>
-            <span class="tag">Azure DevOps</span><span class="tag">TestRail</span>
-            <span class="tag">Allure</span><span class="tag">Maven</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <h3><span class="ico">AI</span>AI &amp; Tooling</h3>
-          <div class="tags">
-            <span class="tag">Claude Code</span><span class="tag">MCP Servers</span>
-            <span class="tag">LLM Workflows</span><span class="tag">Self-Healing Locators</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <h3><span class="ico">DB</span>Data &amp; Observability</h3>
-          <div class="tags">
-            <span class="tag">MongoDB</span><span class="tag">MySQL</span>
-            <span class="tag">Kafka</span><span class="tag">ELK</span>
-            <span class="tag">Grafana</span><span class="tag">Dynatrace</span>
-          </div>
-        </div>
-        <div class="skill-card">
-          <h3><span class="ico">LED</span>Leadership</h3>
-          <div class="tags">
-            <span class="tag">Team Management</span><span class="tag">Estimations</span>
-            <span class="tag">Appraisals</span><span class="tag">Stakeholder Mgmt</span>
-            <span class="tag">Skill Development</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============= EXPERIENCE ============= -->
-  <section id="experience">
-    <div class="container">
-      <div class="section-head">
-        <span class="section-tag">// experience</span>
-        <h2>Career Timeline</h2>
-        <p>12+ years across enterprise SaaS, banking, and networking.</p>
+      <div class="sb-card">
+        <h3>Education</h3>
+        <ul class="sb-list">
+          <li><span class="k">2009</span><span class="v">B.Sc. Computer Science · Sri Venkateswara University</span></li>
+          <li><span class="k">2010</span><span class="v">PG Diploma · Computer Applications · Govt. Training Institute</span></li>
+        </ul>
       </div>
 
-      <div class="timeline">
-        <div class="tl-item">
-          <div class="tl-meta">
-            <span class="tl-date mono">Jun 2016 — Present</span>
-            <span class="tl-company">· Loyalty Methods · Hyderabad</span>
-          </div>
-          <div class="tl-role">Senior QA Automation Lead &amp; Technical Manager</div>
-          <p class="tl-desc">
-            Leading a 38+ member QA team delivering test automation across 15+ enterprise clients (7-Eleven, Speedway,
-            BP, Western Union, MGM Resorts, and more). Architected Karate API and Playwright UI frameworks; sustained
-            99%+ test success rates across every release cycle.
-          </p>
-          <div class="tl-tech">
-            <span class="tag">Playwright</span><span class="tag">Karate</span><span class="tag">TypeScript</span>
-            <span class="tag">Java</span><span class="tag">Jenkins</span><span class="tag">Kafka</span>
-            <span class="tag">AI Workflows</span>
-          </div>
-        </div>
-
-        <div class="tl-item">
-          <div class="tl-meta">
-            <span class="tl-date mono">Aug 2014 — Jun 2016</span>
-            <span class="tl-company">· Dimension Data (NTT Group) · Hyderabad</span>
-          </div>
-          <div class="tl-role">Quality Analyst &amp; Test Automation Engineer</div>
-          <p class="tl-desc">
-            Delivered automated functional and ETL test suites for Cisco Direct Global enterprise networking. Built
-            Kibana/Elasticsearch dashboards for QA observability. Led cloud migration testing contributing to 30%
-            operational cost reduction.
-          </p>
-          <div class="tl-tech">
-            <span class="tag">Selenium</span><span class="tag">Jenkins</span><span class="tag">Python</span>
-            <span class="tag">Kibana</span><span class="tag">Postman</span>
-          </div>
-        </div>
-
-        <div class="tl-item">
-          <div class="tl-meta">
-            <span class="tl-date mono">Jan 2012 — Aug 2014</span>
-            <span class="tl-company">· Capgemini · Pune</span>
-          </div>
-          <div class="tl-role">Associate Consultant &mdash; QA &amp; Test Automation</div>
-          <p class="tl-desc">
-            Delivered functional and automated test suites for Discover Bank's microservice-based banking applications.
-            Integrated automated tests into CI pipelines, validated containerized deployments, and verified Redis cluster
-            availability under production-like loads.
-          </p>
-          <div class="tl-tech">
-            <span class="tag">Selenium</span><span class="tag">Jenkins</span><span class="tag">Docker</span>
-            <span class="tag">Kubernetes</span><span class="tag">Java</span><span class="tag">Python</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============= PROJECTS ============= -->
-  <section id="projects">
-    <div class="container">
-      <div class="section-head">
-        <span class="section-tag">// projects</span>
-        <h2>Selected Projects</h2>
-        <p>Frameworks, tools, and AI-driven workflows I have designed and shipped.</p>
+      <div class="sb-card">
+        <h3>Certifications</h3>
+        <ul class="cert-list">
+          <li>ISTQB Advanced TAE – Certified</li>
+          <li>Project Management with Agile – L1V2</li>
+          <li>HIPAA Compliance</li>
+          <li>AQT Ninja</li>
+          <li>Advance QA Engineer Evolution</li>
+          <li>AWS Solutions Architect – Associate</li>
+          <li>Certified Kubernetes Administrator (CKA)</li>
+          <li>HashiCorp Terraform Associate</li>
+          <li>Microsoft Certified: Fundamentals</li>
+          <li>Red Hat Certified Engineer (RHCE)</li>
+        </ul>
       </div>
 
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-head">
-            <h3>Autonomous QA Agent</h3>
-            <span class="project-badge">AI</span>
-          </div>
-          <div class="role-line">Designer &amp; Lead Engineer</div>
-          <p>
-            Three-in-one autonomous agent: runs nightly regression, classifies failures with AI, auto-drafts bug
-            tickets, proposes locator repairs, files JIRA issues, and distributes results via Teams and email.
-          </p>
-          <div class="project-tech">
-            <span class="tag">Playwright</span><span class="tag">LLM</span><span class="tag">JIRA API</span>
-            <span class="tag">Node.js</span>
-          </div>
-        </div>
+      <div class="sb-card">
+        <h3>Languages</h3>
+        <ul class="sb-list">
+          <li><span class="v">English · Telugu · Hindi</span></li>
+        </ul>
+      </div>
 
-        <div class="project-card">
-          <div class="project-head">
-            <h3>AI Test Generation Workflow</h3>
-            <span class="project-badge">AI</span>
-          </div>
-          <div class="role-line">Architect</div>
-          <p>
-            Converts a natural-language prompt into a complete Playwright suite — page objects, specs, and scenario
-            docs — for both React and Angular. Supports dry-run preview and diff logging.
-          </p>
-          <div class="project-tech">
-            <span class="tag">TypeScript</span><span class="tag">Playwright</span><span class="tag">LLM</span>
-            <span class="tag">AST Parsing</span>
-          </div>
-        </div>
+      <div class="sb-card">
+        <h3>Personal</h3>
+        <ul class="sb-list">
+          <li><span class="k">Availability</span><span class="v">Open to senior roles</span></li>
+          <li><span class="k">Work Mode</span><span class="v">Hybrid · Remote · Onsite</span></li>
+        </ul>
+      </div>
+    </aside>
 
-        <div class="project-card">
-          <div class="project-head">
-            <h3>Karate API Automation Framework</h3>
-            <span class="project-badge">Core</span>
-          </div>
-          <div class="role-line">Architect &amp; Owner</div>
-          <p>
-            Multi-client framework with 11 Maven profiles spanning 25+ test environments. Covers CRUD APIs, Kafka
-            event validation, middleware integrations, NRT, and performance suites with auto-resolved client config.
-          </p>
-          <div class="project-tech">
-            <span class="tag">Karate</span><span class="tag">Java</span><span class="tag">Spring Boot</span>
-            <span class="tag">Maven</span><span class="tag">Kafka</span>
-          </div>
-        </div>
+    <!-- ===== CONTENT ===== -->
+    <main>
 
-        <div class="project-card">
-          <div class="project-head">
-            <h3>Playwright UI Test Framework</h3>
-            <span class="project-badge">Core</span>
-          </div>
-          <div class="role-line">Architect &amp; Owner</div>
-          <p>
-            10K+ E2E test cases across React and Angular apps. Page Object Model with a 3-tier resilient locator
-            strategy (testid → ARIA → semantic) for low maintenance overhead at scale.
-          </p>
-          <div class="project-tech">
-            <span class="tag">Playwright</span><span class="tag">TypeScript</span><span class="tag">React</span>
-            <span class="tag">Angular</span>
-          </div>
+      <!-- Profile Summary -->
+      <div class="sec" id="summary">
+        <div class="sec-head">
+          <span class="tag mono">// 01</span>
+          <h2>Profile Summary</h2>
         </div>
+        <ul class="summary-list">
+          <li>Developed and implemented a <strong>comprehensive QA strategy</strong> aligned with organizational goals — defining quality standards, processes, and methodologies for consistent QA practices across 15+ enterprise clients.</li>
+          <li>Skilled in designing and maintaining <strong>robust, scalable test automation frameworks</strong> using Karate DSL, Playwright, Selenium, Cucumber, TestNG, PyTest, REST Assured, and Postman.</li>
+          <li>Expert in <strong>UI automation</strong> (Playwright, Selenium) and <strong>API automation</strong> (Karate, REST Assured, Postman) across multi-app, multi-client SaaS platforms.</li>
+          <li>Leveraged <strong>AI-driven workflows</strong> (Claude Code, LLMs, MCP servers) to build autonomous QA agents, self-healing locators, and natural-language test generation — reducing test authoring time by ~60%.</li>
+          <li>Streamlined regression cycles via batched runner protocols and tag-driven taxonomy, <strong>sustaining 99%+ test success rates</strong> across every release.</li>
+          <li>Built and integrated <strong>CI/CD pipelines</strong> (Jenkins, GitHub Actions, Azure DevOps) with automated quality gates across build, deploy, and verify stages.</li>
+          <li>Implemented <strong>hybrid API + UI test patterns</strong>, parity testing engines, and schema-contract validation safeguarding rule-engine integrity during legacy modernization.</li>
+          <li>Proficient in <strong>performance testing</strong> with Gatling and JMeter — load profiling, stress testing, and concurrency validation under production-like conditions.</li>
+          <li>Ensured compliance with relevant quality standards (<strong>HIPAA, ISTQB</strong>) and industry best practices across regulated and enterprise environments.</li>
+          <li>Provided <strong>training and mentorship</strong> to a 38+ member QA team on automation best practices, AI tooling, and continuous improvement.</li>
+        </ul>
+      </div>
 
-        <div class="project-card">
-          <div class="project-head">
-            <h3>Parity Testing Engine</h3>
-            <span class="project-badge">Migration</span>
-          </div>
-          <div class="role-line">Designer</div>
-          <p>
-            240+ bi-directional automated tests safeguarding rule-engine integrity during a legacy AngularJS to
-            modern React migration. Detects regressions on both sides of the migration path.
-          </p>
-          <div class="project-tech">
-            <span class="tag">Playwright</span><span class="tag">API Diffing</span>
-            <span class="tag">Schema Validation</span>
-          </div>
+      <!-- Technical Skills -->
+      <div class="sec" id="skills">
+        <div class="sec-head">
+          <span class="tag mono">// 02</span>
+          <h2>Technical Skills</h2>
         </div>
-
-        <div class="project-card">
-          <div class="project-head">
-            <h3>Web-Based Test Lab Portal</h3>
-            <span class="project-badge">Tooling</span>
-          </div>
-          <div class="role-line">Designer</div>
-          <p>
-            One-click test execution portal for non-engineers — browse tests by folder, configure environment and
-            browser, run suites, and watch real-time status with HTML reports.
-          </p>
-          <div class="project-tech">
-            <span class="tag">Node.js</span><span class="tag">HTML</span><span class="tag">CSS</span>
-            <span class="tag">Playwright</span>
-          </div>
+        <div class="skills-table">
+          <div class="skill-row"><div class="k">Automation Tools</div><div class="v">Playwright, Karate DSL, Selenium, Cypress, REST Assured, Postman, Appium</div></div>
+          <div class="skill-row"><div class="k">Frameworks</div><div class="v">Cucumber, TestNG, JUnit, PyTest, Page Object Model, Karate Scenarios, Hybrid API+UI</div></div>
+          <div class="skill-row"><div class="k">Test Management</div><div class="v">TestRail, JIRA, Confluence, Azure DevOps, Qtest Manager, HP-ALM</div></div>
+          <div class="skill-row"><div class="k">Defect Tracking</div><div class="v">JIRA, Azure DevOps, Rally</div></div>
+          <div class="skill-row"><div class="k">Languages</div><div class="v">TypeScript, Java, Python, Groovy, JavaScript, SQL, Bash, Shell, YAML</div></div>
+          <div class="skill-row"><div class="k">Performance</div><div class="v">Gatling, JMeter, Load Profiling, Concurrency Testing, Parallel Execution</div></div>
+          <div class="skill-row"><div class="k">Databases</div><div class="v">MongoDB, MySQL, PostgreSQL, DynamoDB, Redis, Elasticsearch</div></div>
+          <div class="skill-row"><div class="k">Messaging</div><div class="v">Apache Kafka (Producer/Consumer validation), Event-Driven Testing</div></div>
+          <div class="skill-row"><div class="k">CI/CD</div><div class="v">Jenkins, GitHub Actions, Azure DevOps, GitLab CI, Maven, npm</div></div>
+          <div class="skill-row"><div class="k">Reporting</div><div class="v">TestRail, Allure, Cucumber Reports, Playwright HTML, JUnit XML, Teams Webhook</div></div>
+          <div class="skill-row"><div class="k">Observability</div><div class="v">Grafana, Kibana, ELK Stack, Prometheus, Dynatrace, New Relic, DataDog</div></div>
+          <div class="skill-row"><div class="k">AI Tooling</div><div class="v">Claude Code, MCP Servers, LLM Workflows, Self-Healing Locators, AI Coverage Governance</div></div>
+          <div class="skill-row"><div class="k">Source Control</div><div class="v">Git, GitHub, Bitbucket, Azure Repos, SVN</div></div>
+          <div class="skill-row"><div class="k">Platforms</div><div class="v">Web Application, Mobile App, Microservices, Event-Driven Systems</div></div>
+          <div class="skill-row"><div class="k">Methodologies</div><div class="v">Agile Scrum, BDD, TDD, Shift-Left, Risk-Based, Test Pyramid, Parity Testing</div></div>
         </div>
+      </div>
 
-        <div class="project-card">
-          <div class="project-head">
-            <h3>AI User Manual Generator</h3>
-            <span class="project-badge">AI</span>
-          </div>
-          <div class="role-line">Designer</div>
-          <p>
-            Four-step pipeline: discover pages from source, generate descriptions via LLM, capture live Playwright
-            screenshots, and produce an enterprise HTML user guide with search and dark mode.
-          </p>
-          <div class="project-tech">
-            <span class="tag">TypeScript</span><span class="tag">LLM</span><span class="tag">Playwright</span>
-            <span class="tag">HTML Gen</span>
-          </div>
+      <!-- Core Competencies -->
+      <div class="sec">
+        <div class="sec-head">
+          <span class="tag mono">// 03</span>
+          <h2>Core Competencies</h2>
         </div>
+        <div class="pill-grid">
+          <span class="comp-pill">Test Automation</span>
+          <span class="comp-pill">Automation Framework Development</span>
+          <span class="comp-pill">Test Architect</span>
+          <span class="comp-pill">QA Plan &amp; Strategy</span>
+          <span class="comp-pill">QA Process Setup</span>
+          <span class="comp-pill">Resource Management</span>
+          <span class="comp-pill">Process Improvement</span>
+          <span class="comp-pill">Client Management</span>
+          <span class="comp-pill">Quality Assurance Leadership</span>
+          <span class="comp-pill">Mentorship &amp; Team Development</span>
+          <span class="comp-pill">Collaborative Leader</span>
+          <span class="comp-pill">AI-Driven QA Innovation</span>
+          <span class="comp-pill">Regression Engineering</span>
+          <span class="comp-pill">Performance Testing</span>
+          <span class="comp-pill">System Design</span>
+          <span class="comp-pill">Stakeholder Management</span>
+          <span class="comp-pill">Release Estimation</span>
+          <span class="comp-pill">CI/CD Test Integration</span>
+        </div>
+      </div>
 
-        <div class="project-card">
-          <div class="project-head">
-            <h3>Regression Intelligence</h3>
-            <span class="project-badge">Strategy</span>
+      <!-- Soft Skills -->
+      <div class="sec">
+        <div class="sec-head">
+          <span class="tag mono">// 04</span>
+          <h2>Soft Skills</h2>
+        </div>
+        <div class="soft-grid">
+          <div class="soft-item">Team Management &amp; Leadership</div>
+          <div class="soft-item">Mentoring &amp; Coaching</div>
+          <div class="soft-item">Quality Management</div>
+          <div class="soft-item">Critical Thinking</div>
+          <div class="soft-item">Adaptability</div>
+          <div class="soft-item">Continuous Learning</div>
+          <div class="soft-item">Stakeholder Communication</div>
+          <div class="soft-item">Problem Solving</div>
+        </div>
+      </div>
+
+      <!-- Experience -->
+      <div class="sec" id="experience">
+        <div class="sec-head">
+          <span class="tag mono">// 05</span>
+          <h2>Experience</h2>
+        </div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-meta">
+              <span class="tl-date">Jun 2016 — Present</span>
+              <span class="tl-company">· Loyalty Methods · Hyderabad</span>
+            </div>
+            <div class="tl-role">Senior QA Automation Lead &amp; Technical Manager</div>
+            <p class="tl-desc">
+              Leading a 38+ member QA team across 15+ enterprise clients (7-Eleven, Speedway, BP, Western Union, MGM Resorts). Architected Karate API and Playwright UI frameworks delivering 10K+ tests with 99%+ pass rate.
+            </p>
+            <div class="tl-tech">
+              <span>Playwright</span><span>Karate</span><span>TypeScript</span><span>Java</span>
+              <span>Jenkins</span><span>Kafka</span><span>AI Workflows</span>
+            </div>
           </div>
-          <div class="role-line">Designer</div>
-          <p>
-            Tag-driven taxonomy and batched runner protocol sustaining 99%+ test success rate across every release.
-            Auto-refreshed coverage manifests, gap analysis, and drift detection.
-          </p>
-          <div class="project-tech">
-            <span class="tag">Bash</span><span class="tag">Playwright</span><span class="tag">YAML</span>
-            <span class="tag">Reporting</span>
+          <div class="tl-item">
+            <div class="tl-meta">
+              <span class="tl-date">Aug 2014 — Jun 2016</span>
+              <span class="tl-company">· Dimension Data (NTT) · Hyderabad</span>
+            </div>
+            <div class="tl-role">Quality Analyst &amp; Test Automation Engineer</div>
+            <p class="tl-desc">
+              Delivered automated functional and ETL test suites for Cisco Direct Global. Built Kibana/Elasticsearch QA observability dashboards. Led cloud migration testing contributing to 30% operational cost reduction.
+            </p>
+            <div class="tl-tech">
+              <span>Selenium</span><span>Jenkins</span><span>Python</span><span>Kibana</span><span>Postman</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-meta">
+              <span class="tl-date">Jan 2012 — Aug 2014</span>
+              <span class="tl-company">· Capgemini · Pune</span>
+            </div>
+            <div class="tl-role">Associate Consultant &mdash; QA &amp; Test Automation</div>
+            <p class="tl-desc">
+              Delivered functional and automated test suites for Discover Bank's microservice banking applications. Integrated tests into CI pipelines, validated containerized deployments and Redis cluster availability.
+            </p>
+            <div class="tl-tech">
+              <span>Selenium</span><span>Jenkins</span><span>Docker</span><span>Kubernetes</span><span>Java</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ============= CERTIFICATIONS ============= -->
-  <section id="certifications">
-    <div class="container">
-      <div class="section-head">
-        <span class="section-tag">// certifications</span>
-        <h2>Certifications &amp; Education</h2>
-        <p>Continuously validating expertise across QA, cloud, and project management.</p>
+      <!-- Projects -->
+      <div class="sec" id="projects">
+        <div class="sec-head">
+          <span class="tag mono">// 06</span>
+          <h2>Key Projects</h2>
+        </div>
+        <div class="proj-grid">
+          <div class="proj">
+            <div class="proj-head"><h4>Autonomous QA Agent</h4><span class="badge">AI</span></div>
+            <p>3-in-1 agent: nightly regression, AI failure classification, auto-drafted bug tickets, locator repair, JIRA filing, Teams/email distribution.</p>
+            <div class="stack"><span>Playwright</span><span>LLM</span><span>JIRA</span></div>
+          </div>
+          <div class="proj">
+            <div class="proj-head"><h4>AI Test Generation</h4><span class="badge">AI</span></div>
+            <p>Natural-language prompt to full Playwright suite — page objects, specs, scenario docs — for React and Angular.</p>
+            <div class="stack"><span>TypeScript</span><span>LLM</span><span>AST</span></div>
+          </div>
+          <div class="proj">
+            <div class="proj-head"><h4>Karate API Framework</h4><span class="badge">Core</span></div>
+            <p>Multi-client framework with 11 Maven profiles across 25+ environments. CRUD, Kafka events, middleware, NRT, performance.</p>
+            <div class="stack"><span>Karate</span><span>Java</span><span>Spring Boot</span></div>
+          </div>
+          <div class="proj">
+            <div class="proj-head"><h4>Playwright UI Framework</h4><span class="badge">Core</span></div>
+            <p>10K+ E2E test cases across React and Angular with POM and 3-tier resilient locator strategy (testid → ARIA → semantic).</p>
+            <div class="stack"><span>Playwright</span><span>TypeScript</span><span>React</span></div>
+          </div>
+          <div class="proj">
+            <div class="proj-head"><h4>Parity Testing Engine</h4><span class="badge">Migration</span></div>
+            <p>240+ bi-directional tests safeguarding rule-engine integrity during legacy AngularJS to React migration.</p>
+            <div class="stack"><span>Playwright</span><span>Schema</span><span>Diff</span></div>
+          </div>
+          <div class="proj">
+            <div class="proj-head"><h4>Web-Based Test Lab</h4><span class="badge">Tooling</span></div>
+            <p>One-click execution portal for non-engineers with real-time status, environment selection, and HTML reports.</p>
+            <div class="stack"><span>Node.js</span><span>HTML</span><span>Playwright</span></div>
+          </div>
+          <div class="proj">
+            <div class="proj-head"><h4>AI User Manual Generator</h4><span class="badge">AI</span></div>
+            <p>4-step pipeline: source discovery, LLM descriptions, live screenshots, enterprise HTML guide with search.</p>
+            <div class="stack"><span>TypeScript</span><span>LLM</span><span>Playwright</span></div>
+          </div>
+          <div class="proj">
+            <div class="proj-head"><h4>Regression Intelligence</h4><span class="badge">Strategy</span></div>
+            <p>Tag taxonomy, batched runner protocol, coverage manifests, drift detection — sustaining 99%+ pass rate.</p>
+            <div class="stack"><span>Bash</span><span>YAML</span><span>Reporting</span></div>
+          </div>
+        </div>
       </div>
 
-      <div class="certs-grid">
-        <div class="cert-group">
-          <h4>Quality Engineering</h4>
-          <ul class="cert-list">
-            <li>ISTQB Advanced Test Automation Engineer (TAE)</li>
-            <li>Advance QA Engineer Evolution</li>
-            <li>AQT Ninja</li>
-            <li>HIPAA Compliance</li>
-          </ul>
+      <!-- Awards -->
+      <div class="sec">
+        <div class="sec-head">
+          <span class="tag mono">// 07</span>
+          <h2>Awards &amp; Recognition</h2>
         </div>
-        <div class="cert-group">
-          <h4>Project Management</h4>
-          <ul class="cert-list">
-            <li>Project Management with Agile – L1V2</li>
-          </ul>
-        </div>
-        <div class="cert-group">
-          <h4>Cloud &amp; DevOps</h4>
-          <ul class="cert-list">
-            <li>AWS Solutions Architect – Associate</li>
-            <li>Certified Kubernetes Administrator (CKA)</li>
-            <li>HashiCorp Terraform Associate</li>
-            <li>Microsoft Certified: Fundamentals</li>
-            <li>Red Hat Certified Engineer (RHCE)</li>
-          </ul>
-        </div>
-        <div class="cert-group">
-          <h4>Education</h4>
-          <ul class="cert-list">
-            <li>B.Sc. Computer Science · Sri Venkateswara University · 2009</li>
-            <li>PG Diploma in Computer Applications · Govt. Training Institute · 2010</li>
-          </ul>
+        <div class="awards">
+          <div class="award">Digital Warrior Award (2x)</div>
+          <div class="award">Kudos</div>
+          <div class="award">Pat on the Back</div>
+          <div class="award">Guru of the Month</div>
+          <div class="award">You are an Inspiration</div>
+          <div class="award">Top Performer</div>
+          <div class="award">QA Innovation Excellence</div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ============= CONTACT ============= -->
-  <section id="contact">
-    <div class="container">
-      <div class="section-head">
-        <span class="section-tag">// contact</span>
-        <h2>Let's Connect</h2>
-        <p>Open to senior QA leadership, test architecture, and consulting opportunities.</p>
-      </div>
+    </main>
+  </div>
+</div>
 
-      <div class="contact-grid">
-        <a class="contact-card" href="mailto:vgantena@gmail.com">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <div class="contact-body">
-            <div class="label">Email</div>
-            <div class="value">vgantena@gmail.com</div>
-          </div>
-        </a>
+<!-- ===== FOOTER ===== -->
+<footer>
+  &copy; <span id="year"></span> Venkateswarlu Gantena · <span class="mono">Built with HTML &amp; CSS · GitHub Pages</span>
+</footer>
 
-        <a class="contact-card" href="https://www.linkedin.com/in/vgantena/" target="_blank" rel="noopener">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </div>
-          <div class="contact-body">
-            <div class="label">LinkedIn</div>
-            <div class="value">linkedin.com/in/vgantena</div>
-          </div>
-        </a>
-
-        <a class="contact-card" href="https://github.com/vgantena" target="_blank" rel="noopener">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-          </div>
-          <div class="contact-body">
-            <div class="label">GitHub</div>
-            <div class="value">github.com/vgantena</div>
-          </div>
-        </a>
-
-        <a class="contact-card" href="tel:+918885881436">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          </div>
-          <div class="contact-body">
-            <div class="label">Phone</div>
-            <div class="value">+91 88858 81436</div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============= FOOTER ============= -->
-  <footer>
-    <div class="container">
-      <p>&copy; <span id="year"></span> Venkateswarlu Gantena · <span class="mono">Built with HTML &amp; CSS · Hosted on GitHub Pages</span></p>
-    </div>
-  </footer>
-
-  <script>
-    // Theme toggle with localStorage persistence
-    (function() {
-      const root = document.documentElement;
-      const toggle = document.getElementById('themeToggle');
-      const saved = localStorage.getItem('theme');
-      if (saved) root.setAttribute('data-theme', saved);
-      toggle.addEventListener('click', () => {
-        const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-        root.setAttribute('data-theme', next);
-        localStorage.setItem('theme', next);
-      });
-    })();
-    // Auto year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<script>
+  (function() {
+    const root = document.documentElement;
+    const toggle = document.getElementById('themeToggle');
+    const saved = localStorage.getItem('theme');
+    if (saved) root.setAttribute('data-theme', saved);
+    toggle.addEventListener('click', () => {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  })();
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
